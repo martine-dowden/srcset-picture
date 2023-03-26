@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Page Title</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+
+<body>
+  <main>
+  <header>
+    <h1><code>srcset</code> vs <code>&lt;picture&gt;&lt;/picture&gt;</code></h1>
+  </header>
+  
+  <section class="src-set">
+    <img
+      class="section-image"
+      height="300"
+      src="img/sailboat-2400.jpg"
+      srcset="
+        img/sailboat-640.jpg 640w,
+        img/sailboat-1920.jpg 1920w,
+      "
+      sizes="
+        (max-width: 640px) calc(100vw - var(--offset) * 2),
+        81vw
+      "
+      height="640"
+      width="278"
+      alt=""
+    >
+    <div class="fade"></div>
+    <div class="content">
+      <h2><code>srcset</code></h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ornare elit et quam elementum, ac imperdiet dui molestie. Nunc sagittis interdum cursus. Curabitur pulvinar ante quis arcu laoreet lacinia. Nam auctor tincidunt lorem, a ornare mi suscipit a.</p>
+      <p>Photo by <a href="https://unsplash.com/@michaelheld?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Michael Held</a> on <a href="https://unsplash.com/photos/HvIdCs2aU-k?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+    </div>
+  </section>
+  <section class="picture">
+    <picture class="section-image">
+      <source 
+        srcset="./img/sunset-640.avif 640w"
+        height="290"
+        width="640"
+        type="image/avif"
+        sizes="(max-width: 640px) calc(100vw - var(--offset) * 2)"
+        media="(max-width: 640px),"
+      />
+      <source 
+        srcset="./img/sunset-640.webp 640w"
+        height="290"
+        width="640"
+        type="image/webp"
+        sizes="(max-width: 640px) calc(100vw - var(--offset) * 2)"
+        media="(max-width: 640px),"
+      />
+      <source 
+        srcset="./img/sunset-1920.avif 1920w"
+        height="795"
+        width="1920"
+        type="image/avif"
+        sizes="81vw"
+        media="(min-width: 640px),"
+      />
+      <source 
+        srcset="./img/sunset-1920.webp 1920w"
+        height="795"
+        width="1920"
+        type="image/webp"
+        sizes="81vw"
+        media="(min-width: 640px),"
+      />
+      <img src="./img/sunset-640.jpg" alt="" height="290" width="640">
+    </picture>
+    <div class="fade"></div>
+    <div class="content">
+      <h2><code>&lt;picture&gt;&lt;/picture&gt;</code></h2>
+      <p>Fusce augue nunc, convallis facilisis libero quis, dapibus blandit libero. Sed a congue mi. Duis ut diam eget nisl condimentum commodo. Nunc massa velit, dictum ut venenatis at, ullamcorper aliquam nisi. Aenean pharetra mi ut purus mollis facilisis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+      <p>Photo by <a href="https://unsplash.com/@marcwieland95?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Marc Wieland</a> on <a href="https://unsplash.com/photos/OND4GjV0SvQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+    </div>
+  </section>
+
+</main>
+</body>
+
+</html>

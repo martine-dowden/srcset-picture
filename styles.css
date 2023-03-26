@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Nunito:wght@300;500;700&display=swap');
+
+html {
+  --background: #F1EDEE;
+  --primary: #3D5467;
+  --primary-background: #d5dee5;
+  --accent: #5a8079;
+  --accent-background: #c9dedb;
+  --tertiary: #987284;
+  --danger: #481620;
+  --backdrop: rgba(241, 237, 238, .8);
+  
+  /* Typography */
+  --font-family: 'Nunito', sans-serif;
+  --color: #34373a;
+  --code-font-family: 'Inconsolata', monospace;
+  --code-color: #364240;
+  font-size: 14px;
+  
+  /* layout defaults */
+  --offset: 24px;
+  
+  font-family: var(--font-family);
+  color: var(--color);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--background);
+}
+
+body {
+  padding: var(--offset);
+}
+
+h1 { color: var(--accent); }
+h2 { color: var(--primary); }
+
+code {
+  font-family: var(--code-font-family);
+  color: var(--code-color);
+}
+
+picture img {
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+a:link, a:visited {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration-color: var(--tertiary);
+  text-underline-offset: 2px;
+}
+
+header { text-align: center; }
+
+section .fade { display: none; }
+
+section .section-image,
+section .section-image img {
+  width: 100%;
+  object-fit: cover;
+  max-height: 300px;
+}
+
+@media (min-width: 640px) {
+  section {
+    width: 100vw;
+    display: grid;
+    grid-template-rows: 10px auto 10px;
+    margin-left: calc(var(--offset) * -1);
+  }
+  section .content {
+    background: var(--backdrop);
+    backdrop-filter: blur(5px);
+    align-self: center;
+    padding: var(--offset);
+  }
+  section .section-image, section .fade { grid-row: 1 / 4 }
+  section .content { grid-row: 2 }
+  section :where(.section-image, .content) { grid-row: 1 }
+  section .fade { display: block; }
+  
+  .src-set { grid-template-columns: 25% 56% 1fr }
+  .src-set .section-image,
+  .src-set .fade {
+    grid-column: 1 / 3;
+  }
+  .src-set .fade { background: linear-gradient(to left, var(--background), transparent) }
+  .src-set .content { 
+    grid-column: 2 / 4;
+    background: linear-gradient(to left, var(--primary-background), var(--backdrop))
+  }
+  
+  .picture { grid-template-columns: 1fr 56% 25% }
+  .picture .section-image,
+  section .fade {
+    grid-column: 2 / 4;
+  }
+  .picture .fade { background: linear-gradient(to right, var(--background), transparent) }
+  .picture .content { 
+    grid-column: 1 / 3;
+    background: linear-gradient(to right, var(--accent-background), var(--backdrop))
+  }
+}

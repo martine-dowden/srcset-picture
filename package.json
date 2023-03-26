@@ -1,0 +1,14 @@
+{
+  "name": "image-optimization",
+  "version": "1.0.0",
+  "description": "Looking at the differences between using srcset and picture",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server"
+  },
+  "author": "Martine Dowden",
+  "license": "CC-BY-4.0",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

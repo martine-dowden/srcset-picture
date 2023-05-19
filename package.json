@@ -4,10 +4,14 @@
   "description": "Looking at the differences between using srcset and picture",
   "main": "index.html",
   "scripts": {
-    "start": "http-server"
+    "start": "http-server",
+    "version:dev": "npm version prerelease --preid=$VDEV --force",
+    "version:prod": "npm version $VPROD --force",
+    "postversion": "git push && git push --tags",
+    "release": "git checkout latest && git pull && npm run version:prod && git checkout release && git pull && git merge latest && git push && git checkout latest && npm run version:dev",
   },
   "author": "Martine Dowden",
-  "license": "CC-BY-4.0",
+  "license": "MIT",
   "devDependencies": {
     "http-server": "^14.1.1"
   }

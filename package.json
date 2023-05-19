@@ -1,6 +1,6 @@
 {
   "name": "image-optimization",
-  "version": "1.0.2",
+  "version": "1.0.3-next.0",
   "description": "Looking at the differences between using srcset and picture",
   "main": "index.html",
   "scripts": {

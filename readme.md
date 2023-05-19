@@ -15,6 +15,10 @@ In this talk we will
 
 [Link to slides](https://martine.dev/publications/picture-worth-1000-words)
 
+## Demo Link
+
+[Demo](martine-dowden.github.io/srcset-picture/)
+
 ## Dev Setup
 
 You can open the `index.html` directly in the browser or serve it on `localhost:8080`.

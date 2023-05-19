@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Nunito:wght@300;500;700&display=swap');
-
 html {
   --background: #F1EDEE;
   --primary: #3D5467;
@@ -11,9 +9,9 @@ html {
   --backdrop: rgba(241, 237, 238, .8);
   
   /* Typography */
-  --font-family: 'Nunito', sans-serif;
+  --font-family: sans-serif;
   --color: #34373a;
-  --code-font-family: 'Inconsolata', monospace;
+  --code-font-family: monospace;
   --code-color: #364240;
   font-size: 14px;
   

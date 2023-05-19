@@ -8,24 +8,27 @@
 <body>
   <main>
   <header>
-    <h1><code>srcset</code> vs <code>&lt;picture&gt;&lt;/picture&gt;</code></h1>
+    <h1>
+      A Picture is worth a 1000 words
+      <br><small>not 1000MB</small>
+    </h1>
   </header>
   
   <section class="src-set">
+    <!-- <img class="section-image" src="img/sailboat-5905.jpg" alt="" style="aspect-ratio: 320/213"> -->
     <img
       class="section-image"
       height="300"
       src="img/sailboat-2400.jpg"
       srcset="
         img/sailboat-640.jpg 640w,
-        img/sailboat-1920.jpg 1920w,
+        img/sailboat-1920.jpg 1920w
       "
       sizes="
         (max-width: 640px) calc(100vw - var(--offset) * 2),
         81vw
       "
-      height="640"
-      width="278"
+      style="aspect-ratio: 320/213"
       alt=""
     >
     <div class="fade"></div>
@@ -43,33 +46,34 @@
         width="640"
         type="image/avif"
         sizes="(max-width: 640px) calc(100vw - var(--offset) * 2)"
-        media="(max-width: 640px),"
-      />
+        media="(max-width: 640px)"
+      >
       <source 
         srcset="./img/sunset-640.webp 640w"
         height="290"
         width="640"
         type="image/webp"
         sizes="(max-width: 640px) calc(100vw - var(--offset) * 2)"
-        media="(max-width: 640px),"
-      />
+        media="(max-width: 640px)"
+      >
       <source 
         srcset="./img/sunset-1920.avif 1920w"
         height="795"
         width="1920"
         type="image/avif"
         sizes="81vw"
-        media="(min-width: 640px),"
-      />
+        media="(min-width: 640px)"
+      >
       <source 
         srcset="./img/sunset-1920.webp 1920w"
         height="795"
         width="1920"
         type="image/webp"
         sizes="81vw"
-        media="(min-width: 640px),"
-      />
+        media="(min-width: 640px)"
+      >
       <img src="./img/sunset-640.jpg" alt="" height="290" width="640">
+      <!-- <img src="./img/sunset-5763.jpg" alt="" style="aspect-ratio: 320/213"> -->
     </picture>
     <div class="fade"></div>
     <div class="content">

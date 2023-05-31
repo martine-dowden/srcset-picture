@@ -17,7 +17,7 @@ In this talk we will
 
 ## Demo Link
 
-[Demo](martine-dowden.github.io/srcset-picture/)
+[Demo](https://martine-dowden.github.io/srcset-picture/)
 
 ## Dev Setup
 
